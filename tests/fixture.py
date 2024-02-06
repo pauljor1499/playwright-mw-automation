@@ -10,10 +10,10 @@ class Page:
         
 class Login:
     @pytest.fixture
-    def admin_login(page):
+    def teacher_login(page):
         page.goto("/")
-        page.click("//span[contains(.,'Log In')]")
-        assert_that(page.is_visible("//div[@class='title'][contains(.,'Log In')]")).is_true()
-        assert_that(page.is_visible("//input[contains(@type,'email')]")).is_true()
-        assert_that(page.is_visible("//input[contains(@type,'password')]")).is_true()
-        print('Hello')
+        page.click("//button[contains(.,'Login')]")
+        assert_that(page.is_visible("//h4[contains(.,'Log In Account')]")).is_true()
+        assert_that(page.is_visible("//div[contains(@id,'role')]")).is_true()
+        assert_that(page.is_visible("//input[contains(@id,'email')]")).is_true()
+        assert_that(page.is_visible("//input[contains(@id,'password')]")).is_true()
