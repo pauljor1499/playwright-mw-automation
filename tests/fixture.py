@@ -17,3 +17,8 @@ class Login:
         assert_that(page.is_visible("//div[contains(@id,'role')]")).is_true()
         assert_that(page.is_visible("//input[contains(@id,'email')]")).is_true()
         assert_that(page.is_visible("//input[contains(@id,'password')]")).is_true()
+        assert_that(page.is_visible("//button[contains(.,'Sign In')]")).is_true()
+        assert_that(page.is_visible("//a[contains(.,'Forgot Password?')]")).is_true()
+        assert_that(page.is_visible("//a[contains(.,'Don`t have an account? Register')]")).is_true()
+        page.click("//div[contains(@id,'role')]")
+        page.click("//li[contains(.,'Teacher')]")
