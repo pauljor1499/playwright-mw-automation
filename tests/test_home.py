@@ -1,7 +1,6 @@
 from assertpy import assert_that
 import pdb
 import pytest
-from fixture import Login
 
 def test_home_page(page):
     page.goto("/")
