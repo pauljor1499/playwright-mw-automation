@@ -4,7 +4,7 @@ import pytest
 
 def test_home_page(page):
     page.goto("/")
-    assert_that(page.is_visible("//h1[contains(.,'UNLOCK THE POWER OF YOUR FULL POTENCIAL')]")).is_true()
+    assert_that(page.is_visible("//a[@class='active'][contains(.,'Home')]")).is_true()
         
 def test_login_page(page):
     page.goto("/")
@@ -13,3 +13,6 @@ def test_login_page(page):
     assert_that(page.is_visible("//div[contains(@id,'role')]")).is_true()
     assert_that(page.is_visible("//input[contains(@id,'email')]")).is_true()
     assert_that(page.is_visible("//input[contains(@id,'password')]")).is_true()
+    assert_that(page.is_visible("//button[contains(.,'Sign In')]")).is_true()
+    assert_that(page.is_visible("//a[contains(.,'Forgot Password?')]")).is_true()
+    assert_that(page.is_visible("//a[contains(.,'Don`t have an account? Register')]")).is_true()
