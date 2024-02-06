@@ -4,5 +4,6 @@ import pytest
 
 def test_home_page(page):
     page.goto("/")
-    assert_that(page.is_visible("//h2[contains(.,'MathMatters')]")).is_true()
-    print('Home Page')
+    def home_page(page):
+        page.goto("/")
+        assert_that(page.is_visible("//h1[contains(.,'UNLOCK THE POWER OF YOUR FULL POTENCIAL')]")).is_true()
